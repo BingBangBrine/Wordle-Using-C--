@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
     }
     while(getline(cin, input)){
         if(input == "5"){
-            // system("cls");
+            clearScreen();
             break;
         }
         if(input == "4"){

@@ -1,5 +1,5 @@
 #include <iostream>
-#include<unistd.h> // for sleep to work
+#include <unistd.h> // for sleep to work
 #include <fstream> // to create/write/read from files
 #include <vector>
 #include "functions.h"
@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
             int count1 = 0;
             while(gameLaunched() == true){
                 if(fileIsChanged() || count1 == 0){
-                    // system("clear");
+                    clearScreen();
                     keyboard();
                     count1 = 1;
                 }
@@ -21,13 +21,13 @@ int main(int argc, char* argv[]) {
         }
         else if(appLaunched() == true){
             while(appLaunched() == true){
-                // system("clear");
+                clearScreen();
                 cout << "Start the first round." << endl;
                 sleep(1);
                 int count2 = 0;
                 while(gameLaunched() == true){
                     if(fileIsChanged() || count2 == 0){
-                        // system("clear");
+                        clearScreen();
                         keyboard();
                         count2 = 1;
                     }
@@ -36,17 +36,17 @@ int main(int argc, char* argv[]) {
         }
         else if(appLaunched() == false){
             while(appLaunched() == false){
-                // system("clear");
+                clearScreen();
                 cout << "Launch the wordle app to begin." << endl;
                 sleep(1);
                 while(appLaunched() == true){
-                    // system("clear");
+                    clearScreen();
                     cout << "Start the first round." << endl;
                     sleep(1);
                     int count3 = 0;
                     while(gameLaunched() == true){
                         if(fileIsChanged() || count3 == 0){
-                            // system("clear");
+                            clearScreen();
                             keyboard();
                             count3 = 1;
                         }

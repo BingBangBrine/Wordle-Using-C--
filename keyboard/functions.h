@@ -7,10 +7,14 @@
 
 
 #include <iostream>
-#include<unistd.h> // for sleep to work
+#include <unistd.h> // for sleep to work
 #include <fstream> // to create/write/read from files
 #include <vector>
 #include <iomanip>
+
+void clearScreen(){
+    printf( "\033[2J" "\033[1;1H");
+}
 
 
 // status file will have the following format:
