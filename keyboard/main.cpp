@@ -39,19 +39,7 @@ int main(int argc, char* argv[]) {
                 clearScreen();
                 cout << "Launch the wordle app to begin." << endl;
                 sleep(1);
-                while(appLaunched() == true){
-                    clearScreen();
-                    cout << "Start the first round." << endl;
-                    sleep(1);
-                    int count3 = 0;
-                    while(gameLaunched() == true){
-                        if(fileIsChanged() || count3 == 0){
-                            clearScreen();
-                            keyboard();
-                            count3 = 1;
-                        }
-                    }
-                }
+                break;
             }
         }
     }
