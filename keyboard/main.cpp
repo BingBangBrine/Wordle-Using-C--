@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
             int count1 = 0;
             while(gameLaunched() == true){
                 if(fileIsChanged() || count1 == 0){
-                    system("clear");
+                    // system("clear");
                     keyboard();
                     count1 = 1;
                 }
@@ -21,13 +21,13 @@ int main(int argc, char* argv[]) {
         }
         else if(appLaunched() == true){
             while(appLaunched() == true){
-                system("clear");
+                // system("clear");
                 cout << "Start the first round." << endl;
                 sleep(1);
                 int count2 = 0;
                 while(gameLaunched() == true){
                     if(fileIsChanged() || count2 == 0){
-                        system("clear");
+                        // system("clear");
                         keyboard();
                         count2 = 1;
                     }
@@ -36,17 +36,17 @@ int main(int argc, char* argv[]) {
         }
         else if(appLaunched() == false){
             while(appLaunched() == false){
-                system("clear");
+                // system("clear");
                 cout << "Launch the wordle app to begin." << endl;
                 sleep(1);
                 while(appLaunched() == true){
-                    system("clear");
+                    // system("clear");
                     cout << "Start the first round." << endl;
                     sleep(1);
                     int count3 = 0;
                     while(gameLaunched() == true){
                         if(fileIsChanged() || count3 == 0){
-                            system("clear");
+                            // system("clear");
                             keyboard();
                             count3 = 1;
                         }

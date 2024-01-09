@@ -12,7 +12,7 @@
 #include <string>
 
 void howToPlay(){
-    system("clear");
+    // system("clear");
     std::cout << "=============================================" << std::endl;
     std::cout << "                 HOW TO PLAY" << std::endl;
     std::cout << "=============================================" << std::endl;
@@ -39,7 +39,7 @@ void howToPlay(){
 }
 
 void mainMenu(){
-    system("clear");
+    // system("clear");
     std::cout << "=========================" << std::endl; 
     std::cout << "    WELCOME TO WORDLE" << std::endl;
     std::cout << "=========================" << std::endl;
@@ -139,7 +139,7 @@ void resetStatistics(){
         file.close();
     }
 
-    system("clear");
+    // system("clear");
     std::cout << "==========================" << std::endl;
     std::cout << "    STATISTICS SUMMARY" << std::endl;
     std::cout << "==========================" << std::endl;
@@ -186,7 +186,7 @@ void viewStatistics(){
         float winPercent = (float)wins / (float)(wins+losses);
 
 
-        system("clear");
+        // system("clear");
         std::cout << "==========================" << std::endl;
         std::cout << "Statistics Summary" << std::endl;
         std::cout << "==========================" << std::endl;
@@ -365,7 +365,7 @@ void wordle(int wordLength){
     std::vector<std::string> round;
     std::string word = wordUpper(determineWord(wordLength));
     int attempts = 0;
-    system("clear");
+    // system("clear");
 
     std::vector<std::string> guesses;
     // std::cout << word << std::endl;
@@ -379,7 +379,7 @@ void wordle(int wordLength){
         if(attempts == 6 && guess.length() == wordLength && isWord(wordLower(guess), wordLength)){
             guesses.push_back(wordUpper(guess));
             if(wordUpper(guess) == word){
-                system("clear");
+                // system("clear");
                 for(int i=0; i<guesses.size(); i++){
                     printGuess(wordUpper(guesses[i]), wordUpper(word));
                 }
@@ -389,7 +389,7 @@ void wordle(int wordLength){
                 win = "Yes";
                 break;
             }
-            system("clear");
+            // system("clear");
             for(int i=0; i<guesses.size(); i++){
                 printGuess(wordUpper(guesses[i]), wordUpper(word));
             }
@@ -402,7 +402,7 @@ void wordle(int wordLength){
             if(guess.length() == wordLength && isWord(wordLower(guess), wordLength)){
                 guesses.push_back(guess);
                 if(wordUpper(guess) == word){
-                    system("clear");
+                    // system("clear");
                     for(int i=0; i<guesses.size(); i++){
                         printGuess(wordUpper(guesses[i]), wordUpper(word));
                     }
@@ -425,7 +425,7 @@ void wordle(int wordLength){
                 std::cout << "Enter Guess: ";
                 continue;
             }
-            system("clear");
+            // system("clear");
             // std::cout << word << std::endl;
             for(int i=0; i<guesses.size(); i++){
                 printGuess(wordUpper(guesses[i]), wordUpper(word));

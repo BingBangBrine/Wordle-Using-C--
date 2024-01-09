@@ -2,6 +2,7 @@
 #include <fstream>
 #include "functions.h"
 
+
 #define RESET "\033[0m"
 #define GRAY "\033[90m"
 #define GREEN "\033[32m"
@@ -25,7 +26,7 @@ int main(int argc, char* argv[]) {
     }
     while(getline(cin, input)){
         if(input == "5"){
-            system("clear");
+            // system("cls");
             break;
         }
         if(input == "4"){
